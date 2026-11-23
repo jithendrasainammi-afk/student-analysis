@@ -90,3 +90,73 @@ Grades are assigned in `assign_grade()` using an `if-elif-else` chain. Threshold
 | Libraries | Built-in `csv` and `os` modules |
 
 ---
+
+## 📊 Performance Analysis Module *(by Sai Charan)*
+
+The analysis engine processes scores to compute aggregates and flag problem areas:
+
+- **Highest / lowest performer** by percentage
+- **Class average** and **subject-wise averages**
+- **Weak subjects:** any subject whose class average is below 60
+- **Extra support list:** students scoring below 40%
+- **Grade distribution** across A–F
+
+### Sample Output (5 students, 3 subjects)
+
+**Grade Sheet**
+```
+Roll  Name           Maths  Physics  Program   Total      %  Grade
+101   Aarav Sharma      92       88       95     275   91.7      A
+102   Diya Patel        78       72       85     235   78.3      B
+103   Rohan Mehta       65       58       70     193   64.3      C
+104   Sneha Reddy       45       52       60     157   52.3      D
+105   Karan Singh       35       28       42     105   35.0      F
+```
+
+**Class Analysis**
+```
+Total students     : 5
+Class average      : 64.3%
+Highest performer  : Aarav Sharma (91.7%)
+Lowest performer   : Karan Singh (35.0%)
+
+Subject-wise class average:
+  Maths           63.0
+  Physics         59.6  <-- weak subject
+  Programming     70.4
+
+Students needing extra support (below 40%):
+  Karan Singh
+Weak subjects: Physics
+```
+
+## 🧪 Testing
+
+| # | Test Input | Expected Output | Result |
+|---|-----------|-----------------|--------|
+| 1 | Normal marks (75, 80, 85) | Correct total, percentage, Grade B | ✅ Pass |
+| 2 | Boundary marks (39 or 100) | Correct boundary grade | ✅ Pass |
+| 3 | Invalid input (text / negative) | Error message and re-prompt | ✅ Pass |
+| 4 | Empty student record set | Warning to add records first | ✅ Pass |
+| 5 | Missing CSV file on load | New file created automatically | ✅ Pass |
+
+## 🧗 Challenges & Learnings
+
+- **Challenge:** handling incorrect inputs (letters instead of numbers) and managing nested data for multiple subjects per student.
+- **Solution:** `try-except` blocks around every input loop, and dictionaries for clean record lookup.
+- **Learnings:** modular programming, CSV file I/O, defensive programming and collaborative Git workflow.
+
+## 🚀 Future Improvements
+
+- GUI using **Tkinter** for easier navigation
+- Charts and progress curves using **Matplotlib**
+
+## 📚 References
+
+1. Python Software Foundation Documentation: https://docs.python.org
+2. Bennett University course lecture notes and lab manuals
+3. Online Python references for file handling
+
+## 📄 License
+
+This project was developed for academic purposes at Bennett University.
