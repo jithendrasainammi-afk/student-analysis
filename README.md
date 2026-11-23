@@ -53,3 +53,40 @@ This project automates performance evaluation, saves administrative time, gives 
 - Stores records in memory as a **list of dictionaries**: `{"roll": ..., "name": ..., "marks": [...]}`.
 
 ---
+## 🧮 Calculation & Grading Modules *(by Prince Kumar)*
+
+### Formulas
+
+| Quantity | Formula |
+|----------|---------|
+| Total | sum of marks across all subjects |
+| Percentage | `total / number_of_subjects` (each subject is out of 100) |
+| Subject average | sum of that subject's marks for all students ÷ number of students |
+| Class average | mean of all student percentages |
+
+### Grading Scale
+
+| Percentage | Grade |
+|-----------|-------|
+| 90 and above | **A** |
+| 75 – 89.99 | **B** |
+| 60 – 74.99 | **C** |
+| 40 – 59.99 | **D** |
+| Below 40 | **F** |
+
+Grades are assigned in `assign_grade()` using an `if-elif-else` chain. Thresholds can be changed in that one function.
+
+### Python Concepts Used
+
+| Concept | Where it is used |
+|---------|------------------|
+| Variables & data types | Names, roll numbers, marks, totals, percentages |
+| Conditional statements | `if-elif-else` grading |
+| Loops | `for` / `while` loops over students, subjects and input prompts |
+| Lists & dictionaries | Student records and marks |
+| Functions | Grade calculation, input, reporting |
+| File handling | Saving/loading CSV |
+| Exception handling | `try-except` around numeric input |
+| Libraries | Built-in `csv` and `os` modules |
+
+---
