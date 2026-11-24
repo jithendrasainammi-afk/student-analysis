@@ -90,7 +90,49 @@ Grades are assigned in `assign_grade()` using an `if-elif-else` chain. Threshold
 | Libraries | Built-in `csv` and `os` modules |
 
 ---
+⚙️ Installation & Usage (by Priyanshu Kumar)
+Requirements
+Python 3.8 or newer
+No external packages (uses only the standard library, no pip install needed)
+Run the Program
+bash
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+python student_analysis.py
 
+VS Code users: run it in the Terminal (or ▷ → Run Python File), not the Output tab, because the Output tab cannot accept keyboard input.
+
+Main Menu
+============================================
+     STUDENT PERFORMANCE ANALYSIS SYSTEM
+============================================
+  1. Add student records
+  2. View grade sheet
+  3. Class performance analysis
+  4. Save records to CSV file
+  5. Load records from CSV file
+  6. Exit
+============================================
+Option	What it does
+1	Enter students, subjects and marks (validated)
+2	Show the grade sheet with total, % and grade
+3	Show class analysis and weak subjects
+4	Save all records to students.csv
+5	Load records from students.csv
+6	Exit
+💾 File Handling (CSV)
+
+Records are saved as students.csv:
+
+csv
+roll,name,Maths,Physics,Programming
+101,Aarav Sharma,92.0,88.0,95.0
+102,Diya Patel,78.0,72.0,85.0
+103,Rohan Mehta,65.0,58.0,70.0
+104,Sneha Reddy,45.0,52.0,60.0
+105,Karan Singh,35.0,28.0,42.0
+If students.csv does not exist when loading, an empty one is created automatically.
+Invalid or malformed rows are skipped with a message showing the line number.
 ## 📊 Performance Analysis Module *(by Sai Charan)*
 
 The analysis engine processes scores to compute aggregates and flag problem areas:
